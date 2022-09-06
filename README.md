@@ -7,13 +7,25 @@ Due to the time-boxed nature of the exercise I've stuck to what I know (Python) 
 I've spent the alloted time becoming familiar with the structure of the FHIR files, picking out some of the key elements and then writing the code to parse and convert those key elements. 
 
 ## Deployment and running
-requirements
-libraries used
-how to invoke
+- requirements - see requirements.txt for list of imported modules - install relevant modules using pip
+- VM with Python 3 installed
+- I had a Windows VM with Python 3 and Pycharm
+- Create input folder and output folder and edit the relevant parameters in the configuration
+- Create folder for log file (or use existing) and edit relevant parameter in the configuration
+- Copy the scripts FHIRToTable_main.py and FHIRToTableFunctions.py to the local drive of the VM (same directory)
+- navigate to the main script and open in your favoured IDE and run.
+
 
 ## Limitations of the solution
 only some elements picked out - hence some data is lost - enough for demo purposes though
 relies on files being in a directory accessible on VM
+
+## Further Development
+- Extract other resources/tables beyond just Patient and Encounter
+- Incorporate automatic testing
+- Extract parameters into a configuration file.
+- Credentials are not currently required.  These would be held in a separate secure credentials file.  Where AWS credentials, the AWS client already has a credentials file.  Preferred option when AWS services are accessing another is to do it via roles.
+- Do something with processed files - either move to an output folder, zip or move to cheaper storage (set up an S3 lifecycle policy if required)
 
 
 ## Performance and Scaling
