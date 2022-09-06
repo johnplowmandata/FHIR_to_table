@@ -26,6 +26,8 @@ relies on files being in a directory accessible on VM
 - Extract parameters into a configuration file.
 - Credentials are not currently required.  These would be held in a separate secure credentials file.  Where AWS credentials, the AWS client already has a credentials file.  Preferred option when AWS services are accessing another is to do it via roles.
 - Do something with processed files - either move to an output folder, zip or move to cheaper storage (set up an S3 lifecycle policy if required)
+- Allow for overwrite or append to the tables - currently the parquet fils are just overwritten each time
+- More thorough unit and integration testing.  Due to time constraints I've literally just added one test at the end of the script.  However, built-in tests and testing against known test sets should become part of the process/product.
 
 
 ## Performance and Scaling
